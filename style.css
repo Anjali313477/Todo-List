@@ -1,36 +1,43 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-background: linear-gradient(35deg,#576574,#222f3e);
-display: flex;
-height: 100vh;
-justify-content: center;
-align-items: center;
+.flex {
+    display: flex;
 }
-.container{
-    width:60%;
+
+body {
+    background: linear-gradient(35deg, #576574, #222f3e);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
-.heading{
+
+.container {
+    width: 60%;
+}
+
+.heading {
     text-align: center;
     color: white;
     font-size: 2rem;
-    font-family:'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace
 }
-input{
+
+input {
     padding: 10px;
     width: 80%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    background-color:#1e272e;
+    background-color: #1e272e;
     outline: none;
     border: none;
     font-size: larger;
 }
-button{
+
+button {
     padding: 10px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -39,9 +46,33 @@ button{
     font-size: larger;
 }
 
-.date{
+.date {
     margin-block: 20px;
     text-align: center;
     color: white;
     font-size: large;
+}
+
+.task-area {
+    border: 1px solid wheat;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #1e272e;
+    width: 50%;
+    margin: auto;
+}
+
+.icon i{
+border: 1px solid whitesmoke;
+border-radius: 100%;
+padding: 6px;
+background-color: white;
+font-size: 20px;
+}
+
+.input-field{
+    width: 80%;
+}
+.input-field input{
+    width:100%
 }
