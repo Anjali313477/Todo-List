@@ -12,11 +12,9 @@ justify-content: center;
 align-items: center;
 }
 .container{
-    /* border: 1px solid wheat; */
     width:60%;
 }
 .heading{
-    /* border: 1px solid red; */
     text-align: center;
     color: white;
     font-size: 2rem;
@@ -25,7 +23,8 @@ align-items: center;
 input{
     padding: 10px;
     width: 80%;
-    border-radius: 8px 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     background-color:#1e272e;
     outline: none;
     border: none;
@@ -33,8 +32,16 @@ input{
 }
 button{
     padding: 10px;
-    border-radius: 0px 8px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     outline: none;
     border: none;
     font-size: larger;
+}
+
+.date{
+    margin-block: 20px;
+    text-align: center;
+    color: white;
+    font-size: large;
 }
