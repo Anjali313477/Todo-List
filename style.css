@@ -14,7 +14,9 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.hide{
+    display: none;
+}
 .container {
     width: 60%;
 }
@@ -35,6 +37,7 @@ input {
     outline: none;
     border: none;
     font-size: larger;
+    color: white;
 }
 
 button {
@@ -54,7 +57,7 @@ button {
 }
 
 .task-area {
-    border: 1px solid wheat;
+    /* border: 1px solid wheat; */
     padding: 10px;
     border-radius: 20px;
     background-color: #1e272e;
@@ -62,17 +65,19 @@ button {
     margin: auto;
 }
 
-.icon i{
-border: 1px solid whitesmoke;
-border-radius: 100%;
-padding: 6px;
-background-color: white;
-font-size: 20px;
+.icon i {
+    margin-top: 4px;
+    border: 1px solid whitesmoke;
+    border-radius: 100%;
+    padding: 6px;
+    background-color: white;
+    font-size: 20px;
 }
 
-.input-field{
+.input-field {
     width: 80%;
 }
-.input-field input{
-    width:100%
+
+.input-field input {
+    width: 100%
 }
