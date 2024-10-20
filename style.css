@@ -65,7 +65,7 @@ button {
     margin: auto;
 }
 
-.icon i {
+.icon-list i {
     margin-top: 4px;
     border: 1px solid whitesmoke;
     border-radius: 100%;
@@ -76,8 +76,4 @@ button {
 
 .input-field {
     width: 80%;
-}
-
-.input-field input {
-    width: 100%
 }

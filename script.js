@@ -1,4 +1,3 @@
-let tasks = [];
 function currentTime() {
     const newDate = new Date();
     const dateTime = newDate.toLocaleString();
@@ -12,31 +11,43 @@ function submitTask() {
         swal("Please enter a task!", "", "warning");
         return false;
     }
-    tasks.push(taskInput);
-    document.querySelector('#task').value = ""
 
+    let tasks = JSON.parse(localStorage.getItem("object")) || [];
+    tasks.push(taskInput);
+    localStorage.setItem("object", JSON.stringify(tasks));
+    document.querySelector('#task').value = ""
     showtaskList()
 }
 
 function showtaskList() {
-    document.querySelector('.task-list').classList.remove('hide')
-    const taskAreaDiv = document.querySelector('.task-list');
-    let tasklist = ""
-    tasks.forEach(task => {
-        tasklist += `
-        <li class= "flex">
-        <div class="input-field">
-         <input type ="text" value="${task}"
-        </div>
-       <div class= icon>
-        <i class="fa-solid fa-check"></i>
-        <i class="fa-solid fa-trash"></i>
-       </div>
-       </li>
-        `;
-    })
-    taskAreaDiv.innerHTML = tasklist;
+    const taskAreaDiv = document.querySelector('.taskList-Container');
+    document.querySelector('.taskList-Conatiner').classList.remove("hide")
+    let tasks = localStorage.getItem('object');
+    let tasksList = JSON.parse(tasks) || [];
+
+    let elementsList = "";
+    tasksList.forEach((task) => {
+        elementsList += `
+         <div class="task-list ">
+             <div>
+                    <input type="text" value="${task}" class="input-field"> 
+                </div>
+                <div class="icon-list">
+                    <i class="fa-solid fa-check"></i>
+                    <i class="fa-solid fa-trash"></i> 
+                </div>
+                
+         </div>`
+
+
+    });
+
+    taskAreaDiv.innerHTML = elementsList;
 }
+
+
+
+
 
 
 
