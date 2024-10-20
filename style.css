@@ -56,12 +56,12 @@ button {
     font-size: large;
 }
 
-.task-area {
+.task-list {
     /* border: 1px solid wheat; */
     padding: 10px;
     border-radius: 20px;
     background-color: #1e272e;
-    width: 50%;
+    width: 60%;
     margin: auto;
 }
 

@@ -1,5 +1,4 @@
-"use strict"
-const tasks=[];
+let tasks = [];
 function currentTime() {
     const newDate = new Date();
     const dateTime = newDate.toLocaleString();
@@ -12,7 +11,32 @@ function submitTask() {
     if (taskInput === "") {
         swal("Please enter a task!", "", "warning");
         return false;
-    }   
-    const taskArea = document.querySelector('.task-area').classList.remove('hide')
-    document.querySelector('#tasks').value=taskInput   
+    }
+    tasks.push(taskInput);
+    document.querySelector('#task').value = ""
+
+    showtaskList()
 }
+
+function showtaskList() {
+    document.querySelector('.task-list').classList.remove('hide')
+    const taskAreaDiv = document.querySelector('.task-list');
+    let tasklist = ""
+    tasks.forEach(task => {
+        tasklist += `
+        <li class= "flex">
+        <div class="input-field">
+         <input type ="text" value="${task}"
+        </div>
+       <div class= icon>
+        <i class="fa-solid fa-check"></i>
+        <i class="fa-solid fa-trash"></i>
+       </div>
+       </li>
+        `;
+    })
+    taskAreaDiv.innerHTML = tasklist;
+}
+
+
+
