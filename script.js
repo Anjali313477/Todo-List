@@ -21,7 +21,7 @@ function submitTask() {
 
 function showtaskList() {
     const taskAreaDiv = document.querySelector('.taskList-Container');
-    document.querySelector('.taskList-Conatiner').classList.remove("hide")
+    document.querySelector('.taskList-Container').classList.remove('hide');
     let tasks = localStorage.getItem('object');
     let tasksList = JSON.parse(tasks) || [];
 
