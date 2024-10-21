@@ -26,15 +26,15 @@ function showtaskList() {
     let tasksList = JSON.parse(tasks) || [];
 
     let elementsList = "";
-    tasksList.forEach((task) => {
+    tasksList.forEach((task,index) => {
         elementsList += `
-         <div class="task-list ">
+         <div class="task-list flex ">
              <div>
                     <input type="text" value="${task}" class="input-field"> 
                 </div>
                 <div class="icon-list">
-                    <i class="fa-solid fa-check"></i>
-                    <i class="fa-solid fa-trash"></i> 
+                    <i class="fa-solid fa-check"onclick=editTask(${index})></i>
+                    <i class="fa-solid fa-trash"onclick=deleteTask(${index})></i> 
                 </div>
                 
          </div>`
@@ -45,6 +45,17 @@ function showtaskList() {
     taskAreaDiv.innerHTML = elementsList;
 }
 
+
+function deleteTask(index){
+    let task = JSON.parse(localStorage.getItem("object"))||[]
+   task = task.filter((_,i)=>i!==index)
+    localStorage.setItem("object",JSON.stringify(task));
+    showtaskList()
+}
+
+function editTask(index){
+    
+}
 
 
 
