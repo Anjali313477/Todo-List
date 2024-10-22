@@ -13,7 +13,19 @@ function submitTask() {
     }
 
     let tasks = JSON.parse(localStorage.getItem("object")) || [];
-    tasks.push(taskInput);
+    if (taskExists) {
+        swal("Task already exists!", "", "warning");
+        return false;
+    }
+    let newId = tasks.length ?
+        tasks[tasks.length - 1].id + 1 : 1;
+    let taskData = {
+        id: newId,
+        taskName: taskInput,
+        isTaskComplete: false
+    }
+
+    tasks.push(taskData);
     localStorage.setItem("object", JSON.stringify(tasks));
     document.querySelector('#task').value = ""
     showtaskList()
@@ -26,14 +38,14 @@ function showtaskList() {
     let tasksList = JSON.parse(tasks) || [];
 
     let elementsList = "";
-    tasksList.forEach((task,index) => {
+    tasksList.forEach((task, index) => {
         elementsList += `
          <div class="task-list flex ">
              <div>
-                    <input type="text" value="${task}" class="input-field"> 
+                    <input type="text" value="${task.taskName}" class="input-field"> 
                 </div>
                 <div class="icon-list">
-                    <i class="fa-solid fa-check"onclick=editTask(${index})></i>
+                    <i class="fa-solid fa-check"onclick=completeTask(${index})></i>
                     <i class="fa-solid fa-trash"onclick=deleteTask(${index})></i> 
                 </div>
                 
@@ -46,17 +58,21 @@ function showtaskList() {
 }
 
 
-function deleteTask(index){
-    let task = JSON.parse(localStorage.getItem("object"))||[]
-   task = task.filter((_,i)=>i!==index)
-    localStorage.setItem("object",JSON.stringify(task));
+function deleteTask(index) {
+    let task = JSON.parse(localStorage.getItem("object")) || []
+    task = task.filter((_, i) => i !== index)
+    localStorage.setItem("object", JSON.stringify(task));
     showtaskList()
 }
 
-function editTask(index){
-    
+function completeTask(index) {
+    let tasks = JSON.parse(localStorage.getItem("object")) || [];
+    if (tasks[index]) {
+        tasks[index].isTaskComplete = true;
+        localStorage.setItem("object", JSON.stringify(tasks));
+    }
+    showtaskList();
 }
-
 
 
 
