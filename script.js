@@ -1,3 +1,6 @@
+let body = document.querySelector('body')
+
+body.addEventListener('load',showtaskList)
 function currentTime() {
     const newDate = new Date();
     const dateTime = newDate.toLocaleString();
