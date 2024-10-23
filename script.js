@@ -35,10 +35,6 @@ function showtaskList() {
 
     let elementsList = "";
     tasksList.forEach((task, index) => {
-        if(task.isTaskComplete==true){
-            let spacificTask=document.querySelector("input-field").classList.add('.text-strike-through'); 
-              
-        }
         elementsList += `
          <div class="task-list flex ">
              <div>
@@ -53,6 +49,10 @@ function showtaskList() {
 
 
     });
+    if(task.isTaskComplete==true){
+        let spacificTask=document.querySelector("input-field").classList.add('.text-strike-through'); 
+          
+    }
 
     taskAreaDiv.innerHTML = elementsList;
 }
