@@ -47,6 +47,7 @@ button {
     outline: none;
     border: none;
     font-size: larger;
+cursor: pointer;
 }
 
 .date {

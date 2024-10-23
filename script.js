@@ -11,12 +11,6 @@ function submitTask() {
         swal("Please enter a task!", "", "warning");
         return false;
     }
-
-    let tasks = JSON.parse(localStorage.getItem("object")) || [];
-    if (taskExists) {
-        swal("Task already exists!", "", "warning");
-        return false;
-    }
     let newId = tasks.length ?
         tasks[tasks.length - 1].id + 1 : 1;
     let taskData = {
