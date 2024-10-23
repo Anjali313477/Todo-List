@@ -1,6 +1,4 @@
-let body = document.querySelector('body')
-
-body.addEventListener('load',showtaskList)
+window.addEventListener('load', showtaskList)
 function currentTime() {
     const newDate = new Date();
     const dateTime = newDate.toLocaleString();
@@ -14,7 +12,7 @@ function submitTask() {
         swal("Please enter a task!", "", "warning");
         return false;
     }
-    let tasks = JSON.parse(localStorage.getItem("object"))||[]
+    let tasks = JSON.parse(localStorage.getItem("object")) || []
     let newId = tasks.length ?
         tasks[tasks.length - 1].id + 1 : 1;
     let taskData = {
@@ -37,11 +35,15 @@ function showtaskList() {
 
     let elementsList = "";
     tasksList.forEach((task, index) => {
+        if(task.isTaskComplete==true){
+            let spacificTask=document.querySelector("input-field").classList.add('.text-strike-through'); 
+              
+        }
         elementsList += `
          <div class="task-list flex ">
              <div>
-                    <input type="text" value="${task.taskName}" class="input-field"> 
-                </div>
+              <p class="input-field">${task.taskName}</p>
+             </div>
                 <div class="icon-list">
                     <i class="fa-solid fa-check"onclick=completeTask(${index})></i>
                     <i class="fa-solid fa-trash"onclick=deleteTask(${index})></i> 

@@ -80,3 +80,7 @@ cursor: pointer;
 .input-field {
     width: 80%;
 }
+
+.text-strike-through{
+    text-decoration:line-through;
+}
