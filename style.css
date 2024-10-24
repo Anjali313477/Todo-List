@@ -14,9 +14,11 @@ body {
     justify-content: center;
     align-items: center;
 }
-.hide{
+
+.hide {
     display: none;
 }
+
 .container {
     width: 60%;
 }
@@ -47,7 +49,7 @@ button {
     outline: none;
     border: none;
     font-size: larger;
-cursor: pointer;
+    cursor: pointer;
 }
 
 .date {
@@ -65,22 +67,25 @@ cursor: pointer;
     width: 40%;
     margin: auto;
     margin-top: 10px;
+    justify-content: space-between;
+}
+
+.task-list p {
+    color: white;
+    font-size: 1.3rem;
+    padding: 6px;
 }
 
 .icon-list i {
     margin-top: 4px;
     border: 1px solid whitesmoke;
     border-radius: 100%;
-    padding: 6px;
+    padding: 4px;
     background-color: white;
     font-size: 20px;
     cursor: pointer;
 }
 
-.input-field {
-    width: 80%;
-}
-
-.text-strike-through{
-    text-decoration:line-through;
+.text-strike-through {
+    text-decoration: line-through;
 }

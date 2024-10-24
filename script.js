@@ -49,7 +49,7 @@ function showtaskList() {
 
 
     });
-    if(task.isTaskComplete==true){
+    if(tasks.isTaskComplete==true){
         let spacificTask=document.querySelector("input-field").classList.add('.text-strike-through'); 
           
     }
