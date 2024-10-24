@@ -38,7 +38,7 @@ function showtaskList() {
         elementsList += `
          <div class="task-list flex ">
              <div>
-              <p class="input-field">${task.taskName}</p>
+                <p class ="input-field ${task.isTaskComplete?'text-strike-through':''}">${task.taskName}</p>
              </div>
                 <div class="icon-list">
                     <i class="fa-solid fa-check"onclick=completeTask(${index})></i>
@@ -46,12 +46,6 @@ function showtaskList() {
                 </div>
                 
          </div>`;
-         if(task.isTaskComplete==true){
-            let spacificTask=document.querySelector(".input-field").classList.add('.text-strike-through'); 
-              
-        }
-
-
     });
 
 
