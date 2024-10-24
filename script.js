@@ -45,8 +45,8 @@ function showtaskList() {
                     <i class="fa-solid fa-trash"onclick=deleteTask(${index})></i> 
                 </div>
                 
-         </div>`
-         if(tasks.isTaskComplete==true){
+         </div>`;
+         if(task.isTaskComplete==true){
             let spacificTask=document.querySelector(".input-field").classList.add('.text-strike-through'); 
               
         }
