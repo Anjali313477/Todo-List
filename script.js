@@ -46,13 +46,14 @@ function showtaskList() {
                 </div>
                 
          </div>`
+         if(tasks.isTaskComplete==true){
+            let spacificTask=document.querySelector(".input-field").classList.add('.text-strike-through'); 
+              
+        }
 
 
     });
-    if(tasks.isTaskComplete==true){
-        let spacificTask=document.querySelector("input-field").classList.add('.text-strike-through'); 
-          
-    }
+
 
     taskAreaDiv.innerHTML = elementsList;
 }
