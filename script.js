@@ -38,7 +38,7 @@ function showtaskList() {
         elementsList += `
          <div class="task-list flex ">
              <div>
-                <p class ="input-field ${task.isTaskComplete?'text-strike-through':''}">${task.taskName}</p>
+                <p class="${task.isTaskComplete?'text-strike-through':''}">${task.taskName}</p>
              </div>
                 <div class="icon-list">
                     <i class="fa-solid fa-check"onclick=completeTask(${index})></i>

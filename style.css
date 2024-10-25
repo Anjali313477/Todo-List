@@ -69,12 +69,13 @@ button {
     margin-top: 10px;
     justify-content: space-between;
 }
-
 .task-list p {
     color: white;
     font-size: 1.3rem;
     padding: 6px;
-}
+} 
+
+
 
 .icon-list i {
     margin-top: 4px;
