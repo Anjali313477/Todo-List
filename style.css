@@ -21,6 +21,7 @@ body {
 
 .container {
     width: 60%;
+    padding: 10px;
 }
 
 .heading {
@@ -29,7 +30,6 @@ body {
     font-size: 2rem;
     font-family: 'Courier New', Courier, monospace
 }
-
 input {
     padding: 10px;
     width: 80%;
@@ -43,6 +43,7 @@ input {
 }
 
 button {
+    width:19%;
     padding: 10px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -64,7 +65,7 @@ button {
     padding: 10px;
     border-radius: 20px;
     background-color: #1e272e;
-    width: 40%;
+    width: 45%;
     margin: auto;
     margin-top: 10px;
     justify-content: space-between;

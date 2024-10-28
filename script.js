@@ -41,14 +41,12 @@ function showtaskList() {
                 <p class="${task.isTaskComplete?'text-strike-through':''}">${task.taskName}</p>
              </div>
                 <div class="icon-list">
-                    <i class="fa-solid fa-check"onclick=completeTask(${index})></i>
+                    <i class="fa-solid fa-check ${task.isTaskComplete?'hide':''}" onclick="completeTask(${index})"></i>
                     <i class="fa-solid fa-trash"onclick=deleteTask(${index})></i> 
                 </div>
                 
          </div>`;
     });
-
-
     taskAreaDiv.innerHTML = elementsList;
 }
 

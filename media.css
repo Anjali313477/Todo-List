@@ -1,0 +1,41 @@
+ @media screen and (max-width:1200px){
+    .task-list {
+        width: 70%
+    }
+    .heading{
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width:990px){
+    .task-list {
+        width: 70%
+    }
+    .container{
+        width:80%
+    }
+    .heading{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:740px){
+    .container{
+        width:100%
+    }
+    .heading{
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width:595px){
+    input{
+        width:70%
+    }
+    button{
+        width:29%
+    }
+    .task-list {
+        width: 80%
+    }
+    .heading{
+        font-size: 1.2rem;
+    }
+}
