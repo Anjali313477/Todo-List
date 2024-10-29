@@ -48,6 +48,9 @@ function showtaskList() {
          </div>`;
     });
     taskAreaDiv.innerHTML = elementsList;
+    if(tasksList.length>=5){
+       taskAreaDiv.style.overflowY='auto'
+     }
 }
 
 

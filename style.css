@@ -18,6 +18,20 @@ body {
 .hide {
    visibility:hidden
 }
+.taskList-Container{
+    /* border: 1px solid #222f3e; */
+    height: 300px;
+    overflow-y:auto;
+}
+
+.taskList-Container::-webkit-scrollbar{
+    width:15px;
+}
+.taskList-Container::-webkit-scrollbar-thumb{
+    background:linear-gradient(#222f3e,#576574);
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+}
 
 .container {
     width: 60%;
